@@ -1,0 +1,32 @@
+site_name: Cristian Rodríguez Canto
+site_description: Chilean Software Engineer | Projects, Articles, and CV
+site_url: https://c11r11.github.io
+
+theme:
+  name: material
+  palette: 
+    scheme: slate
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tooltips
+
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+
+nav:
+  - Home: index.md
+  - Articles: articles/
+  - CV: cv.pdf

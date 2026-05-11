@@ -1,43 +1,44 @@
-# Project Instructions: Personal GitHub Pages & Blog
+# Project Instructions: Personal Website (MkDocs)
 
-This repository is a personal GitHub Pages site used for publishing articles and technical notes.
+This repository is a personal site built with **MkDocs** and the **Material** theme.
 
 ## Project Overview
-- **Purpose:** Public personal site and blog.
-- **Technology:** GitHub Pages (Jekyll).
+- **Purpose:** Public personal site, portfolio, and blog.
+- **Technology:** MkDocs (Material theme).
 - **Structure:**
-    - `_posts/`: Markdown files for articles (format: `YYYY-MM-DD-title.md`).
-    - `assets/`: Images, CSS, and other static files.
-    - `index.md`: Homepage listing recent articles.
-    - `_config.yml`: Jekyll configuration.
+    - `mkdocs.yml`: Main configuration file.
+    - `docs/`: All content files.
+    - `docs/index.md`: Homepage with banner.
+    - `docs/articles/`: Articles and blog posts.
+    - `docs/cv.pdf`: Professional CV.
 
 ## Article Workflow
 
 ### 1. Creating an Article
-Use the `gh-pages-articles` skill or create a file manually:
-- **Filename Format:** `YYYY-MM-DD-slug-title.md`
-- **Front Matter:**
+Place new markdown files in `docs/articles/`.
+- **Filename:** `descriptive-title.md`
+- **Metadata:** MkDocs uses standard Markdown. You can add meta tags at the top:
   ```yaml
   ---
-  layout: post
   title: "Article Title"
-  date: YYYY-MM-DD HH:MM:SS +/-TTTT
-  categories: [tag1, tag2]
+  description: "A short summary"
+  date: YYYY-MM-DD
   ---
   ```
 
 ### 2. Local Preview
-If you have Jekyll installed locally:
+Run the MkDocs development server:
 ```bash
-bundle exec jekyll serve
+mkdocs serve
 ```
 
 ### 3. Publishing
-Changes pushed to the `main` branch are automatically deployed by GitHub Pages.
+The site is typically built and deployed to GitHub Pages (often via GitHub Actions or `mkdocs gh-deploy`).
 
 ## Agent Skills & Automation
-- **gh-pages-articles skill:** Automates article scaffolding.
+- **gh-pages-articles skill:** Automates article scaffolding for the `docs/articles/` directory.
     - **Installation:** `gemini skills install gh-pages-articles.skill --scope workspace`
     - **Reload:** After installation, run `/skills reload`.
+
 
 
