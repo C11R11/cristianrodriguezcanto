@@ -3,7 +3,7 @@
 <div class="content-card" markdown="1" style="background:#b7dfcc">
 ## "Agile killed the spec to focus on the craft of code. AI is bringing the spec back because code is now 'cheap,' but directing synthetic programmers who lack self-awareness is the new high-stakes challenge."
 
-> See now the [working result]() of this post.
+> See now the [working result](https://c11r11.github.io/agentic-factory-showcase/){:target="_blank"} of this post.
 
 </div>
 
@@ -54,7 +54,7 @@ To see how this works, I chose **Gemini CLI**. First, because it is the first on
 * Define the spec, plan, and implement
 * Iterate
 
-The results were pretty good for a first try and without any framework or external tooling.
+The results were pretty good for a first try and without any framework or external tooling like openspec or others.
 
 * Gemini CLI (and all the other LLM chats I found) helped me.
 * I ran out of free quota a couple of times.

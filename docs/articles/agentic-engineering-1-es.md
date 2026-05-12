@@ -1,12 +1,10 @@
 [🇬🇧](agentic-engineering-1.md) [🇪🇸](agentic-engineering-1-es.md)
 
 <div class="content-card" markdown="1" style="background:#b7dfcc">
-## "Agile mató a la especificación porque programar era difícil. La IA está trayendo de vuelta la especificación porque ahora el código es barato, pero la dirección es cara."
+## "Agile mató a la especificación porque programar (bien) era difícil. La IA está trayendo de vuelta la especificación porque ahora el código es barato, pero la dirección es cara."
 
-> Mira ahora el [resultado de este post]() (en inglés).
-
+> Mira ahora el [resultado de este post](https://c11r11.github.io/agentic-factory-showcase/){:target="_blank"}.
 </div>
-
 
 <div class="content-card" markdown="1">
 
@@ -14,19 +12,19 @@
 
 **Captando la idea...**
 
-Después de un par de videos en YouTube, decidí profundizar con artículos más extensos. Hasta ahora, el "Vibe coding" y el "prompt engineering" eran dos cosas que compartían una salida no determinista. El concepto de Desarrollo Dirigido por Especificaciones (Spec-Driven Development - SDD) apareció para intentar cerrar la brecha entre las soluciones basadas en LLM y algo productivo y confiable.
+Después de un par de videos en YouTube, decidí profundizar en esto. Hasta ahora, el "Vibe coding" y el "prompt engineering" eran dos cosas que compartían una salida no determinista. El concepto de Desarrollo Dirigido por Especificaciones (Spec-Driven Development - SDD) apareció para intentar acortar la brecha entre las soluciones basadas en LLM y algo productivo y confiable.
 
 **El viejo y confiable Waterfall**
 
-El SDD no es nuevo; es algo que empecé a hacer cuando conseguí mi primer trabajo el 2010 👴🏼. Para producir una buena pieza de software, primero necesitas saber qué estás haciendo. Esa es la fase de análisis, donde las personas se enfocan en entender un problema y generan requerimientos (junto con los clientes). Con Agile, llegamos a un punto donde mucha documentación detallada no era tan relevante; eso fue en parte porque el desarrollo de software pasó de un contexto más científico o formal a la web, donde todos quieren crear un sitio o una app, y la mayoría de las veces el cliente no tiene idea de lo que quiere.
+El SDD no es nuevo; es algo que empecé a hacer cuando por primera vez me contrataron para construir software a tiempo completo por allá por el 2010 👴🏼. Para producir una buena pieza de software, primero necesitas saber qué estás haciendo. Esa es la fase de análisis, donde las personas se enfocan en entender un problema y generan requerimientos (junto con los clientes). Con Agile, llegamos a un punto donde mucha documentación detallada no era tan relevante; eso fue en parte porque el desarrollo de software pasó de un contexto más científico o formal a la web, donde todos quieren crear un sitio o una app, y la mayoría de las veces el cliente necesita descubrir lo que quiere construir.
 
-Agile se centró en hacer software funcional que hablara por sí mismo. Eso fue básicamente porque escribir código era algo difícil de hacer, y hacerlo mantenible era aún más complejo. Surgieron los patrones de diseño, junto con el clean code y más. Esto se adaptó perfectamente a la industria: si el código es difícil de hacer bien, no pierdas tiempo haciendo especificaciones; descubramos todos juntos qué queremos construir y tratemos de hacerlo de la mejor manera posible.
+Agile se centró en hacer software funcional que hablara por sí mismo. Eso fue básicamente porque escribir código era algo difícil de hacer, y hacerlo mantenible era aún más complejo. Surgieron los patrones de diseño, junto con el clean code, SOLID y más. Esto se adaptó perfectamente a la industria: si el código es difícil de hacer bien, no pierdas tiempo haciendo especificaciones; descubramos todos juntos qué queremos construir y tratemos de hacerlo de la mejor manera posible.
 
 **Hasta que...**
 
-Esa fue la realidad durante un par de décadas, hasta que ChatGPT irrumpió y cambió la idea de hacer software. Actualmente, los agentes basados en LLM pueden realizar refactorizaciones completas y desarrollar productos enteros. Ahora, con un ritmo de programación mucho más rápido, el problema vuelve a ser definir qué queremos: de vuelta a la especificación.
+Esa fue la realidad durante un par de décadas, hasta que ChatGPT irrumpió y cambió la idea de hacer software. Actualmente, los agentes basados en LLM pueden realizar refactorizaciones completas y desarrollar productos completos. Ahora, con un ritmo de programación mucho más rápido, el problema vuelve a ser definir qué queremos: de vuelta a la especificación detallada.
 
-Con eso, hacer buen software también se vuelve más fácil. He hecho módulos enteros con TDD (en c++), pero eso toma mucho tiempo, y a veces se evitaban cambios de diseño. Ahora puedo decirle a un agente LLM que cree siempre todo tipo de suites de prueba.
+Con eso, hacer buen software también se vuelve más fácil. En el pasado he hecho módulos con TDD (y en c++), pero eso toma mucho tiempo, y a veces se evitaban cambios de diseño. Ahora puedo decirle a un agente LLM que cree siempre todo tipo de suites de prueba.
 
 **Hice algo con una definición ad-hoc de SDD**
 
@@ -44,7 +42,7 @@ Entonces, necesitaba una excusa para crear algo con SDD y ver qué pasaba. La id
 * **Implementation (Autonomía Restringida):** El agente LLM ejecuta el plan de forma autónoma. Consume las especificaciones, respeta las reglas del *harness* y genera la base de código. Esta fase concluye con la creación de una rama y un *Pull Request*, transicionando el trabajo desde la generación "sintética" de vuelta a la supervisión humana.
 * **Validation (Gate de Calidad con Humano en el Ciclo):** Una fase crítica de revisión donde la salida autónoma es auditada por expertos humanos. La implementación se valida contra las especificaciones originales; una vez aprobado el PR, el código se fusiona en la rama productiva, completando el ciclo.
 
-**Elección de proveedor**
+**Elección de la herramienta**
 
 Para ver cómo funciona esto, elegí **Gemini CLI**. Primero, porque es el primero que encontré con un free tier. La idea del ejercicio es:
 
@@ -52,7 +50,7 @@ Para ver cómo funciona esto, elegí **Gemini CLI**. Primero, porque es el prime
 * Definir la especificación (spec), planear e implementar.
 * Iterar.
 
-Los resultados fueron bastante buenos para un primer intento y sin ningún framework o herramienta externa.
+Los resultados fueron bastante buenos para un primer intento y sin ningún framework o herramienta externa como openspec o similares.
 
 * Gemini CLI (y todos los otros chats de LLM que encontré) me ayudaron.
 * Me quedé sin cuota gratuita un par de veces.
