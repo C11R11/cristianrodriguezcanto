@@ -3,7 +3,7 @@
 <div class="content-card">
     <div class="profile-hero">
         <div class="profile-image">
-            <img src="assets/img/profile.jpg" alt="Cristian Rodríguez Canto">
+            <img src="assets/img/img_profile.jpg" alt="Cristian Rodríguez Canto">
         </div>
         <div class="profile-text">
             <h2>15 years trying to make the best possible software artifacts!.</h2>
