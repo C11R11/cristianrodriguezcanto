@@ -1,70 +1,74 @@
+<div class="content-card" markdown="1" style="background:#b7dfcc">
+## "Agile killed the specification because code was hard. AI is bringing the specification back because code is now cheap, but direction is expensive."
+
+> See now the [working result]() of this post.
+
+</div>
 
 
 <div class="content-card" markdown="1">
 
-#  Agentic engineering, part one. 
-
-> See now the [working result]() of this exercise. 
+# Agentic engineering, part one.
 
 **Getting the idea...**
 
-After a couple of youtube videos I decide to dig deeper into more extended articles. So far Vibe coding and prompt engineering were two things the share the non deterministic output. The spec driven development (Sdd) concept came along, trying to fill the gap between the LLMs based solutions into something productive and reliable.
+After a couple of YouTube videos, I decided to dig deeper into more extended articles. So far, Vibe coding and prompt engineering were two things that shared non-deterministic output. The Spec-Driven Development (SDD) concept came along, trying to fill the gap between LLM-based solutions and something productive and reliable.
 
 **The good old waterfall**
 
- Sdd isn't new, it's something I start doing when I get my first job. In order to produce a good peace of software, first you need to know what you're doing. That is the analysis phase, where people focused on understand a problem generate requirements (together with clients). With agile we get to the point where the a much detailed documentation wasn't so much relevant, that was in part because the software development moves from a more scientific or formal context to the web, when everyone wants to create a site or an app, and most of the time the client don't have a clue about what they want.
+SDD isn't new; it's something I started doing when I got my first job. In order to produce a good piece of software, first you need to know what you're doing. That is the analysis phase, where people focused on understanding a problem generate requirements (together with clients). With Agile, we reached a point where much detailed documentation wasn't as relevant; that was in part because software development moved from a more scientific or formal context to the web, where everyone wants to create a site or an app, and most of the time the client doesn't have a clue about what they want.
 
-Agile focused on making working software, that will speak for itself. That was basically because making code was a hard thing to do, and making maintainable was even more complex. Design patterns emerge, clean code and all. And that suits perfect the industry, if the code its hard to do well don't waste time doing specification, lets all together discover what we want to build, and try to do it the best possible.
+Agile focused on making working software that would speak for itself. That was basically because writing code was a hard thing to do, and making it maintainable was even more complex. Design patterns emerged, along with clean code and more. This suited the industry perfectly: if code is hard to do well, don't waste time doing specifications; let's all discover together what we want to build and try to do it the best way possible.
 
 **Until...**
 
-That was for a couple of decades, until chat gpt irrupt, and change a bit the making software idea. Right now LLM based agents can make entire refactors, and develop entire products. Now with a more faster programming pace, the problem goes back to define what we want, back to the specification.
+That was the case for a couple of decades, until ChatGPT irrupted and changed the idea of making software. Right now, LLM-based agents can perform entire refactors and develop entire products. Now, with a much faster programming pace, the problem goes back to defining what we want—back to the specification.
 
-With that making good software also becomes more easy. I made myself entire modules with tdd, but that takes so much time, and making design changes sometimes got avoid. Now I can tell an LLM agent to always creates all kind of testing suites. 
+With that, making good software also becomes easier. I have made entire modules myself with TDD, but that takes so much time, and making design changes sometimes was avoided. Now I can tell an LLM agent to always create all kinds of testing suites.
 
-**I make something with adhoc sdd definition**
+**I made something with an ad-hoc SDD definition**
 
-So I needed to get an excuse to create something with ssd, and see what happens. And the idea was to simulate how a code supply chain can operate. Next image defines a bit the main idea.
+So, I needed an excuse to create something with SDD and see what happens. The idea was to simulate how a code supply chain can operate. The next image defines the main idea.
 
-**Vendor choose**
+**Vendor choice**
 
-To see how this works I choose **gemini cli**. First because its the first one I found with a free tier usable. The idea:
+To see how this works, I chose **Gemini CLI**. First, because it is the first one I found with a usable free tier. The idea:
 
-* Start from scratch, asking gemini cli to make the harness 
-* Define the spec, plan and implement
+* Start from scratch, asking Gemini CLI to make the harness
+* Define the spec, plan, and implement
 * Iterate
 
-The results were pretty good for a first try and without any framework or external tooling. 
+The results were pretty good for a first try and without any framework or external tooling.
 
-* Gemini cli (and all the other llms chats I found) helped me to 
-* I ran out of free quota a couple of times. 
-* I create specs and several skills to help making the specs, plan and then code generation.
+* Gemini CLI (and all the other LLM chats I found) helped me.
+* I ran out of free quota a couple of times.
+* I created specs and several skills to help make the specs, plan, and then generate code.
 
 **Token Telemetry**
 
-Along with the code I create an skill and rules to have telemetry for all the prompts I send. With the idea to create a dashboard and track how many input, reasoning and output tokens are needed through all the sdd Cycle. To give a more experimental touch to this exercise, and see later which ssd phase or user story implementation gets all the reasoning.
+Along with the code, I created a skill and rules to have telemetry for all the prompts I send, with the idea to create a dashboard and track how many input, reasoning, and output tokens are needed through the entire SDD cycle. This gives a more experimental touch to this exercise to see later which SDD phase or user story implementation consumes the most reasoning.
 
 **Results**
 
-This is a resulting dashoard out from the sdd implementation.
+This is a resulting dashboard from the SDD implementation.
 
 [See the result]()
 
 ### Conclusions
 
-* Sometimes was a bit bored reduce all the fun code years into long markdown files
-* You can see sdd in action, and working
-* Token measurement, although pretty rudimentical, shows that the first part of sdd (the foundations) requires a lot of work and time to align the LLM agent to not hallucinate and follow the idea.
-* Reminds me I had to work with programmers, people specialliced in understand requirements and turns them into code. If you don't define well the task troubled emerges. Now it's good and bad at the same time, the agent can redo and not conplain, but there's nothing like humans understanding the product context, vocabulary and all the things agents don't get (yet)
+* The transition from 'writing code' to 'writing specifications' is a mental shift; it trades the immediate dopamine hit of coding for the long-term stability of architecture. You can emphatize with those "it's not fun anymore" comments.
+* You can see SDD in action and working.
+* Token measurement, although pretty rudimentary, shows that the first part of SDD (the foundations) requires a lot of work and time to align the LLM agent so it doesn't hallucinate and follows the idea.
+* It reminds me of having to work with programmers—people specialized in understanding requirements and turning them into code. If you don't define the task well, trouble emerges. Now it's good and bad at the same time: the agent can redo the work and not complain, but there's nothing like humans understanding the product context, vocabulary, and all the things agents don't get (yet).
 
 ### Next steps
 
-* Gemini cli has a pay as you go plan, when you pay for the used tokens. Maybe applying infrastructure FinOps principles to this exercise can be a good way to see weak points and ways to be more productive.
-* Another good idea can be the finding ways to align the user pace with this new coding pace. Right now this kind of technoligy produces more code than the humans (software teams and clients) can process.
+* Gemini CLI has a pay-as-you-go plan where you pay for the used tokens. Maybe applying infrastructure FinOps principles to this exercise can be a good way to see weak points and ways to be more productive.
+* Another good idea can be finding ways to align the user pace with this new coding pace. Right now, this kind of technology produces more code than humans (software teams and clients) can process.
 
 ### References
 
-> They are a few more, this ones are the most relevant for the exercise
+> There are a few more, but these are the most relevant for the exercise.
 
 - [Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants](https://arxiv.org/pdf/2602.00180){:target="_blank"}
 - [Agent, Sub-Agent, Skill, or Tool? A Practitioner’s Guide to Extending Agentic AI Systems](https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177204917.78786098/v1?onload=true){:target="_blank"}
