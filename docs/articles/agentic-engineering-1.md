@@ -1,3 +1,5 @@
+[🇬🇧](agentic-engineering-1.md) [🇪🇸 (AI generated)](agentic-engineering-1-es.md)
+
 <div class="content-card" markdown="1" style="background:#b7dfcc">
 ## "Agile killed the specification because code was hard. AI is bringing the specification back because code is now cheap, but direction is expensive."
 
@@ -72,7 +74,6 @@ This is a resulting dashboard from the SDD implementation.
 
 - [Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants](https://arxiv.org/pdf/2602.00180){:target="_blank"}
 - [Agent, Sub-Agent, Skill, or Tool? A Practitioner’s Guide to Extending Agentic AI Systems](https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177204917.78786098/v1?onload=true){:target="_blank"}
-- [Cómo mis agentes escribieron 200k líneas de código en producción - T3chFest 2026](https://www.youtube.com/watch?v=SUG-cEMFKFM)
-- [Presentation](https://docs.google.com/presentation/d/1nMuN1xpDj5DUCTqOcewRSQuux6tEbnGs0h2B6m-K0co/edit?slide=id.p14#slide=id.p14)
+- [Cómo mis agentes escribieron 200k líneas de código en producción - T3chFest 2026](https://www.youtube.com/watch?v=SUG-cEMFKFM){:target="_blank"} - [Presentación](https://docs.google.com/presentation/d/1nMuN1xpDj5DUCTqOcewRSQuux6tEbnGs0h2B6m-K0co/edit?slide=id.p14#slide=id.p14){:target="_blank"}
 
 </div>
