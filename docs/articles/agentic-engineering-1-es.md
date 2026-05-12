@@ -1,4 +1,4 @@
-[🇬🇧](agentic-engineering-1.md) [🇪🇸 (AI generated)](agentic-engineering-1-es.md)
+[🇬🇧](agentic-engineering-1.md) [🇪🇸](agentic-engineering-1-es.md)
 
 <div class="content-card" markdown="1" style="background:#b7dfcc">
 ## "Agile mató a la especificación porque programar era difícil. La IA está trayendo de vuelta la especificación porque ahora el código es barato, pero la dirección es cara."
@@ -10,7 +10,7 @@
 
 <div class="content-card" markdown="1">
 
-# Ingeniería Agéntica, parte uno.
+# Agentic engineering, parte uno.
 
 **Captando la idea...**
 
@@ -18,23 +18,35 @@ Después de un par de videos en YouTube, decidí profundizar con artículos más
 
 **El viejo y confiable Waterfall**
 
-El SDD no es nuevo; es algo que empecé a hacer cuando conseguí mi primer trabajo. Para producir una buena pieza de software, primero necesitas saber qué estás haciendo. Esa es la fase de análisis, donde las personas se enfocan en entender un problema y generan requerimientos (junto con los clientes). Con Agile, llegamos a un punto donde mucha documentación detallada no era tan relevante; eso fue en parte porque el desarrollo de software pasó de un contexto más científico o formal a la web, donde todos quieren crear un sitio o una app, y la mayoría de las veces el cliente no tiene idea de lo que quiere.
+El SDD no es nuevo; es algo que empecé a hacer cuando conseguí mi primer trabajo el 2010 👴🏼. Para producir una buena pieza de software, primero necesitas saber qué estás haciendo. Esa es la fase de análisis, donde las personas se enfocan en entender un problema y generan requerimientos (junto con los clientes). Con Agile, llegamos a un punto donde mucha documentación detallada no era tan relevante; eso fue en parte porque el desarrollo de software pasó de un contexto más científico o formal a la web, donde todos quieren crear un sitio o una app, y la mayoría de las veces el cliente no tiene idea de lo que quiere.
 
 Agile se centró en hacer software funcional que hablara por sí mismo. Eso fue básicamente porque escribir código era algo difícil de hacer, y hacerlo mantenible era aún más complejo. Surgieron los patrones de diseño, junto con el clean code y más. Esto se adaptó perfectamente a la industria: si el código es difícil de hacer bien, no pierdas tiempo haciendo especificaciones; descubramos todos juntos qué queremos construir y tratemos de hacerlo de la mejor manera posible.
 
 **Hasta que...**
 
-Ese fue el caso durante un par de décadas, hasta que ChatGPT irrumpió y cambió la idea de hacer software. Actualmente, los agentes basados en LLM pueden realizar refactorizaciones completas y desarrollar productos enteros. Ahora, con un ritmo de programación mucho más rápido, el problema vuelve a ser definir qué queremos: de vuelta a la especificación.
+Esa fue la realidad durante un par de décadas, hasta que ChatGPT irrumpió y cambió la idea de hacer software. Actualmente, los agentes basados en LLM pueden realizar refactorizaciones completas y desarrollar productos enteros. Ahora, con un ritmo de programación mucho más rápido, el problema vuelve a ser definir qué queremos: de vuelta a la especificación.
 
-Con eso, hacer buen software también se vuelve más fácil. He hecho módulos enteros yo mismo con TDD, pero eso toma mucho tiempo, y a veces se evitaban cambios de diseño. Ahora puedo decirle a un agente LLM que cree siempre todo tipo de suites de prueba.
+Con eso, hacer buen software también se vuelve más fácil. He hecho módulos enteros con TDD (en c++), pero eso toma mucho tiempo, y a veces se evitaban cambios de diseño. Ahora puedo decirle a un agente LLM que cree siempre todo tipo de suites de prueba.
 
 **Hice algo con una definición ad-hoc de SDD**
 
 Entonces, necesitaba una excusa para crear algo con SDD y ver qué pasaba. La idea era simular cómo puede operar una cadena de suministro de código (code supply chain). La siguiente imagen define la idea principal.
 
+![alt text](image-2.png)
+
+**Fases**
+
+### Descripciones de Fases Propuestas
+
+* **Foundations (Estableciendo el Harness):** Establecimiento del modelo de gobernanza del proyecto. Esto incluye definir los límites arquitectónicos en `GEMINI.md`, configurar las *skills* del agente y asegurar el *stack* tecnológico. El *harness* actúa como el "andamiaje determinista" necesario para asegurar la implementación y prevenir la divergencia del agente.
+* **Specs (Definiendo el Contrato):** Una fase de análisis bidireccional donde se formaliza el "Qué". A través de un diálogo de ida y vuelta con la CLI del LLM, los requerimientos se transforman en especificaciones Markdown persistentes que sirven como la única fuente de verdad (*single source of truth*) para toda la cadena de suministro.
+* **Planning (Descomposición Estratégica):** El agente LLM toma el "asiento del conductor" para deconstruir especificaciones complejas en un conjunto finito y accionable de tareas de implementación. Dado que la ejecución posterior es desatendida, esta fase requiere una validación humana formal (*sign-off*) para asegurar que el plan se alinea con la arquitectura prevista.
+* **Implementation (Autonomía Restringida):** El agente LLM ejecuta el plan de forma autónoma. Consume las especificaciones, respeta las reglas del *harness* y genera la base de código. Esta fase concluye con la creación de una rama y un *Pull Request*, transicionando el trabajo desde la generación "sintética" de vuelta a la supervisión humana.
+* **Validation (Gate de Calidad con Humano en el Ciclo):** Una fase crítica de revisión donde la salida autónoma es auditada por expertos humanos. La implementación se valida contra las especificaciones originales; una vez aprobado el PR, el código se fusiona en la rama productiva, completando el ciclo.
+
 **Elección de proveedor**
 
-Para ver cómo funciona esto, elegí **Gemini CLI**. Primero, porque es el primero que encontré con un nivel gratuito usable. La idea:
+Para ver cómo funciona esto, elegí **Gemini CLI**. Primero, porque es el primero que encontré con un free tier. La idea del ejercicio es:
 
 * Empezar de cero, pidiendo a Gemini CLI que cree el entorno (harness).
 * Definir la especificación (spec), planear e implementar.
@@ -52,9 +64,14 @@ Junto con el código, creé una "skill" y reglas para tener telemetría de todos
 
 **Resultados**
 
-Este es un tablero resultante de la implementación de SDD.
+Este es un dashboad resultante de la implementación de SDD.
 
-[Ver el resultado]()
+[Ver el resultado](https://c11r11.github.io/agentic-factory-showcase/){:target="_blank"}
+
+* Este dashboard proporciona una ventana transparente a la "Labor Sintética" de este ejercicio.
+* El conteo de tokens es real; toda la información fue recopilada durante el proceso de creación del dashboard y del backend que lo procesa.
+* Un slice es una pieza de software a construir; el equivalente a una historia de usuario (user story).
+* La Eficiencia de Producción es el ratio de rendimiento entre el Consumo Total del Ciclo de Vida y los Tokens de Salida Funcional. Un porcentaje inicial bajo es normal: representa el "Impuesto Arquitectónico" necesario para estabilizar el Harness Agéntico. A medida que el contexto y las restricciones del proyecto (vía GEMINI.md) maduran, esta métrica sirve como indicador principal de la salud del harness. Si la eficiencia no escala con el tiempo, esto señala una falla sistémica en la alineación entre el prompt y el contexto.
 
 ### Conclusiones
 
@@ -74,6 +91,7 @@ Este es un tablero resultante de la implementación de SDD.
 
 - [Spec-Driven Development: From Code to Contract in the Age of AI Coding Assistants](https://arxiv.org/pdf/2602.00180){:target="_blank"}
 - [Agent, Sub-Agent, Skill, or Tool? A Practitioner’s Guide to Extending Agentic AI Systems](https://www.techrxiv.org/doi/pdf/10.36227/techrxiv.177204917.78786098/v1?onload=true){:target="_blank"}
+- [Agent Harness for Large Language Model Agents: A Survey](http://preprints.org/frontend/manuscript/1cceb6ffec11d44f73a135899b974632/download_pub)
 - [Cómo mis agentes escribieron 200k líneas de código en producción - T3chFest 2026](https://www.youtube.com/watch?v=SUG-cEMFKFM){:target="_blank"} - [Presentación](https://docs.google.com/presentation/d/1nMuN1xpDj5DUCTqOcewRSQuux6tEbnGs0h2B6m-K0co/edit?slide=id.p14#slide=id.p14){:target="_blank"}
 
 

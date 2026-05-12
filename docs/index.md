@@ -5,7 +5,7 @@
         </div>
         <div class="profile-text" markdown="1">
             <p>Hola, I'm <strong>Cristian</strong> from 🇨🇱</p>
-            <p>I’ve been working in software development since 2009, covering various roles throughout the entire SDLC. Most of my experience is focused on complex problem-solving, ranging from web development to desktop applications.</p>
+            <p>Software Engineer with a 15-year track record of mastering and modernizing complex, proprietary ecosystems. From managing large-scale ERPs in the mining industry to implementing DevSecOps from the ground up, I specialize in applying universal principles—SOLID, Clean Architecture, and Design Patterns—to any technology stack. I am a self-taught engineer (GitHub Actions Certified) who excels at bridging the gap between legacy reliability and modern automation, ensuring that quality and security are built into the process, not just the code.</p>
             <p>Currently, I focus on software architecture, developer experience, and exploring the intersection of distributed systems and intelligent agents.</p>
         </div>
     </div>
