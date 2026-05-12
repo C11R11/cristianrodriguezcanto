@@ -1,0 +1,233 @@
+/* Recreating the sjmielke.com aesthetic for MkDocs Material */
+
+:root {
+    --md-primary-fg-color: rgb(66, 66, 66);
+    --md-primary-bg-color: rgb(66, 66, 66);
+    --md-typeset-font-size: 12pt;
+}
+
+/* 1. Page Background & Font Baseline */
+body, .md-container {
+    background-color: #f4f4f4 !important; /* Changed from silver to match reference */
+    font-family: system-ui !important;
+    font-size: 9pt !important;
+}
+
+/* 2. Hide Default MkDocs UI */
+.md-header, .md-sidebar, .md-search, .md-footer, .md-tabs {
+    display: none !important;
+}
+
+/* 3. The Fixed Top Bar (Broken out of the card flow) */
+.custom-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important; /* Forces it to span the entire screen */
+    background-color: #f8f8f8 !important; /* Slightly off-white header background */
+    z-index: 100;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+    padding: 1.5em 4em !important;
+    box-sizing: border-box;
+    border-bottom: 1px solid #e0e0e0;
+    margin: 0 !important;
+}
+
+/* Header Typography */
+.custom-header strong {
+    font-size: 2.2em; /* Bumped up for a stronger presence */
+    font-weight: bold;
+    color: #333;
+}
+.custom-header nav {
+    display: flex;
+    gap: 1.5em;
+}
+
+.custom-header a {
+    text-decoration: none !important;
+    color: #444 !important;
+    font-weight: bold;
+    font-size: 1.3em; /* Increased from 1.1em */
+}
+
+.custom-header a:hover {
+    color: #000 !important;
+}
+
+/* 4. The Content Container (Now invisible) */
+.md-content {
+    padding-top: 6em !important; 
+    padding-bottom: 5em !important; /* Space for the fixed footer */
+}
+
+.md-main__inner {
+    max-width: 1000px !important;
+    margin: 2em auto 5em auto !important; 
+    padding: 0 !important; /* Removed padding */
+    background-color: transparent !important; /* Removed white background */
+    box-shadow: none !important; /* Removed shadow */
+    text-align: left !important;
+}
+
+/* 5. Content Typography */
+.md-typeset {
+    font-family:  system-ui !important; /* Replaced system-ui */
+    color: rgb(66, 66, 66) !important;
+    font-size: 12pt !important;
+    line-height: 1.6;
+    text-align: left !important;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+    font-weight: bold !important;
+    color: #222 !important;
+    border-bottom: none !important;
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+}
+
+.md-typeset a {
+    color: rgb(66, 66, 66) !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+}
+
+.md-typeset a:hover {
+    color: #000 !important;
+}
+
+/* 6. Mobile Adjustments */
+@media (max-width: 768px) {
+    .custom-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+        padding: 1.5em 2em !important;
+    }
+    
+    .md-content {
+        padding-top: 0em !important;
+    }
+    
+    .md-main__inner {
+        padding: 2em !important;
+        width: 90% !important;
+        margin: 1em auto 3em auto !important;
+    }
+}
+
+/* --- Profile Hero Layout --- */
+.profile-hero {
+    display: flex;
+    gap: 3em; 
+    align-items: flex-start;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+.profile-image {
+    flex: 0 0 240px; 
+}
+
+.profile-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* This forces the square shape */
+    object-fit: cover;   /* This ensures it crops nicely instead of squishing */
+    display: block;
+    border-radius: 2px;
+}
+
+.profile-text {
+    flex: 1; /* Allows the text to take up the remaining space */
+}
+
+/* Specific typography for the hero header to match the screenshot */
+.profile-text h2 {
+    margin-top: 0 !important;
+    font-size: 1.6em !important;
+    line-height: 1.25 !important;
+    color: #222 !important;
+}
+
+/* Mobile adjustments: Stack the image on top of the text on small screens */
+@media (max-width: 768px) {
+    .profile-hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+    
+    .profile-image {
+        flex: 0 0 auto;
+        max-width: 220px;
+    }
+}
+
+/* --- New Individual Card Styling --- */
+.content-card {
+    background-color: #ffffff;
+    padding: 2.5em 4.5em;
+    margin-bottom: 1em; /* Space between the separate cards */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+}
+
+/* Remove default top margin for elements at the very top of a card */
+.content-card > *:first-child,
+.content-card h3:first-child {
+    margin-top: 0 !important;
+}
+
+/* --- Fixed Footer Styling --- */
+.custom-footer {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    background-color: #f8f8f8 !important; /* Matches the header */
+    z-index: 100;
+    
+    display: flex;
+    justify-content: center; /* Centers the links */
+    gap: 2.5em;
+    
+    padding: 1.2em 0 !important;
+    border-top: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+.custom-footer a {
+    text-decoration: none !important;
+    color: #444 !important;
+    font-weight: bold;
+    font-size: 1.2em; /* Increased from 1em */
+}
+
+.custom-footer a:hover {
+    color: #000 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
+}
+
+/* Mobile adjustments for the cards */
+@media (max-width: 768px) {
+    .content-card {
+        padding: 2em;
+    }
+}
+
+/* Remove default top margin for elements at the very top of a card */
+.content-card > *:first-child,
+.content-card h3:first-child {
+    margin-top: 0 !important;
+}
+
+/* Hide auto-injected MkDocs page titles that fall outside custom cards */
+.md-content__inner > h1:first-child {
+    display: none !important;
+}

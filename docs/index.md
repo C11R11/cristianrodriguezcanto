@@ -1,47 +1,21 @@
----
-hide:
-  - navigation
-  - toc
----
 
-# <div align="center">Hola, I'm Cristian Rodríguez Canto</div>
 
-<div align="center">
-  <strong>Chilean Software Engineer</strong>
+<div class="content-card">
+    <div class="profile-hero">
+        <div class="profile-image">
+            <img src="assets/img/profile.jpg" alt="Cristian Rodríguez Canto">
+        </div>
+        <div class="profile-text">
+            <h2>15 years trying to make the best possible software artifacts!.</h2>
+            <p>Hola, I'm <strong>Cristian Rodríguez Canto</strong>, a Chilean Software Engineer.</p>
+            <p>Currently, I focus on software architecture, developer experience, and exploring the intersection of distributed systems and intelligent agents.</p>
+        </div>
+    </div>
 </div>
 
-<br>
+<div class="content-card" markdown="1">
 
-<div class="grid cards" markdown>
-
--   :material-file-account: __My CV__
-
-    ---
-
-    Professional experience, skills, and education.
-
-    [:octicons-arrow-right-24: View CV](cv.pdf)
-
--   :material-format-list-bulleted-type: __Articles__
-
-    ---
-
-    Thoughts on software, engineering, and tech.
-
-    [:octicons-arrow-right-24: Browse Articles](articles/index.md)
+# Recent posts
+*   **[First Post](first-post.md)** (2026-05-11) - Setting up my minimalist site.
 
 </div>
-
-<br>
-
----
-
-## 🚀 Projects
-
-*   **[Project Name](https://github.com/c11r11/project-link)** - A brief description of what this project does and the tech stack used.
-*   **[Another Project](https://github.com/c11r11/another-link)** - Another cool thing I built.
-
-## 📬 Contact
-Let's connect!
-
-[:material-email: Email](mailto:your-email@example.com) · [:material-github: GitHub](https://github.com/c11r11) · [:material-linkedin: LinkedIn](https://www.linkedin.com/in/your-profile)
