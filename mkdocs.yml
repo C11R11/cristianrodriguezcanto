@@ -31,3 +31,8 @@ nav:
   - Home: index.md
   - Blog: articles/index.md
   - CV: assets/cv.pdf
+
+extra:
+  analytics:
+    provider: google
+    property: G-8CBZW9T5YM # Replace with your actual ID
