@@ -6,6 +6,8 @@
 
 A collection of technical notes, essays, and observations on software engineering.
 
-*   **[First Post](first-post.md)** (2026-05-11) - Setting up my minimalist site.
+**2026**
+
+*   **[Agentic Engineering, part 1](agentic-engineering-1.md)** (may, 2026).
 
 </div>

@@ -61,7 +61,7 @@ body, .md-container {
 
 /* 4. The Content Container (Now invisible) */
 .md-content {
-    padding-top: 6em !important; 
+    padding-top: 4em !important; 
     padding-bottom: 5em !important; /* Space for the fixed footer */
 }
 
@@ -127,7 +127,7 @@ body, .md-container {
     gap: 3em; 
     align-items: flex-start;
     margin-top: 1em;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
 }
 
 .profile-image {
@@ -135,11 +135,12 @@ body, .md-container {
 }
 
 .profile-image img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* This forces the square shape */
-    object-fit: cover;   /* This ensures it crops nicely instead of squishing */
+    width: auto;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Keeps it square so radius makes a circle */
+    object-fit: cover;   /* Ensures the face is centered and cropped nicely */
     display: block;
-    border-radius: 2px;
+    border-radius: 50%;  /* THIS IS THE CHANGE: 50% makes a perfect circle */
 }
 
 .profile-text {
@@ -171,10 +172,10 @@ body, .md-container {
 /* --- New Individual Card Styling --- */
 .content-card {
     background-color: #ffffff;
-    padding: 2.5em 4.5em;
+    padding: 1.5em 4.5em;
     margin-bottom: 1em; /* Space between the separate cards */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    border-radius: 2px;
+    border-radius: 10px;
 }
 
 /* Remove default top margin for elements at the very top of a card */
@@ -189,15 +190,16 @@ body, .md-container {
     bottom: 0 !important;
     left: 0 !important;
     width: 100vw !important;
-    background-color: #f8f8f8 !important; /* Matches the header */
+    background-color: #38598b !important;
     z-index: 100;
     
     display: flex;
     justify-content: center; /* Centers the links */
     gap: 2.5em;
     
-    padding: 1.2em 0 !important;
+    padding: 0.3em 0 !important;
     border-top: 1px solid #e0e0e0;
+    color: white;
     box-sizing: border-box;
 }
 

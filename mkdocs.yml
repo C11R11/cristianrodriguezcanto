@@ -30,6 +30,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Blog: articles/index.md
+  - Projects: projects/index.md
   - CV: assets/cv.pdf
 
 extra:
