@@ -5,8 +5,8 @@
         </div>
         <div class="profile-text" markdown="1">
             <p>Hola, I'm <strong>Cristian</strong> from 🇨🇱</p>
-            <p>Software Engineer with a 15-year track record of mastering and modernizing complex, proprietary ecosystems. From managing large-scale ERPs in the mining industry to implementing DevSecOps from the ground up, I specialize in applying universal principles—SOLID, Clean Architecture, and Design Patterns—to any technology stack. I am a self-taught engineer (GitHub Actions Certified) who excels at bridging the gap between legacy reliability and modern automation, ensuring that quality and security are built into the process, not just the code.</p>
-            <p>Currently, I focus on software architecture, developer experience, and exploring the intersection of distributed systems and intelligent agents.</p>
+            Civil Computer Engineer with over 15 years of robust software engineering background (C++, .NET, PHP) who has spent recent years pivoting towards Application Security (AppSec), DevSecOps, and Quality Automation. Leverages a deep, structural understanding of legacy and cloud architectures to systematically identify vulnerabilities, design resilient automated testing pipelines, and bridge the gap between development squads and security frameworks. </p>
+            <p>Fluent in English (B2) with extensive experience collaborating within international distributed teams under Agile/Scrum methodologies.<p>
         </div>
     </div>
 </div>
