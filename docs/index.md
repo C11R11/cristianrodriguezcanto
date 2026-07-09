@@ -5,7 +5,7 @@
         </div>
         <div class="profile-text" markdown="1">
             <p>Hola, I'm <strong>Cristian</strong> from 🇨🇱</p>
-            <p>I am a Civil Computer Engineer with over 15 years of experience building reliable software systems. Driven by an innate 
+            <p>I am a Computer Engineer with over 15 years of experience building reliable software systems. Driven by an innate 
             curiosity and a passion for continuous learning, I have naturally evolved from core software development into specializing 
             in system quality, automated validation, and application security. I combine a meticulous, structured mindset with a deep 
             understanding of architecture to systematically spot flaws, protect system integrity, and build reliable automation pipelines.</p>
