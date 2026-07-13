@@ -4,11 +4,7 @@
             <img src="assets/img/img_profile.jpg" alt="Cristian Rodríguez Canto">
         </div>
         <div class="profile-text" markdown="1">
-            <p>Hola, I'm <strong>Cristian</strong> from 🇨🇱</p>
-            <p>I am a Computer Engineer with over 15 years of experience building reliable software systems. Driven by an innate 
-            curiosity and a passion for continuous learning, I have naturally evolved from core software development into specializing 
-            in system quality, automated validation, and application security. I combine a meticulous, structured mindset with a deep 
-            understanding of architecture to systematically spot flaws, protect system integrity, and build reliable automation pipelines.</p>
+            <p>Hola, soy Cristian, Ingeniero en Informática. Actualmente me encuentro consolidando una transición activa hacia roles de Ingeniería de Continuidad Operacional, DevOps y DevSecOps, acumulando experiencia práctica en la administración de servidores Linux, la gestión de soluciones con Docker y la automatización de infraestructura mediante pipelines de CI/CD..</p>
         </div>
     </div>
 </div>
