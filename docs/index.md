@@ -4,7 +4,7 @@
             <img src="assets/img/img_profile.jpg" alt="Cristian Rodríguez Canto">
         </div>
         <div class="profile-text" markdown="1">
-            <p>Hola, soy Cristian, Ingeniero en Informática. Actualmente me encuentro consolidando una transición activa hacia roles de Ingeniería de Continuidad Operacional, DevOps y DevSecOps, acumulando experiencia práctica en la administración de servidores Linux, la gestión de soluciones con Docker y la automatización de infraestructura mediante pipelines de CI/CD..</p>
+            <p>Hola, soy Cristian, Ingeniero en Informática. Ingeniero de software especializado en desarrollo backend y sistemas. Mis intereses están orientados hacia construcción de sistemas resilientes, y optimización de infraestructura y procesos de desarrollo</p>
         </div>
     </div>
 </div>
